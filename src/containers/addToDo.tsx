@@ -2,7 +2,11 @@ import * as React from "react";
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
-const AddTodo = ({ dispatch }) => {
+type Props = {
+  dispatch: () => void
+}
+
+const AddTodo = ({ dispatch }:Props) => {
   let input
 
   return (

@@ -1,8 +1,10 @@
-import * as React from "react";
-import FilterLink from '../containers/FilterLink'
+import React, {FunctionComponent} from "react";
+import FilterLink from '../containers/filterLink'
 import { VisibilityFilters } from '../actions'
 
-const Footer = () => (
+type FooterProps = {}
+
+const Footer:FunctionComponent<FooterProps> = () => (
   <div>
     <span>Show: </span>
     <FilterLink filter={VisibilityFilters.SHOW_ALL}>

@@ -1,12 +1,12 @@
-import * as React from "react";
+import React, {FunctionComponent} from "react";
 
-type Props = {
+type LinkProps = {
   active: boolean;
-  children: object;
+  children: React.ReactNode;
   onClick: () => void;
 }
 
-const Link = ({ active, children, onClick }: Props) => (
+const Link: FunctionComponent<LinkProps> = ({ active, children, onClick }) => (
     <button
        onClick={onClick}
        disabled={active}
