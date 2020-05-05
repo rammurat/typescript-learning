@@ -56,8 +56,10 @@ let emp = function (f: {firstName: string, lastName: string}) {
 
 // object - interface example 
 interface Point { 
-    x:number 
-    y:number 
+    x: number;
+    y: number;
+    z?: number; // I am optional parameter 
+    readonly zz?: number // I am read only 
 }
 
 function addPoints(p1:Point,p2:Point) : Point { 
@@ -65,6 +67,15 @@ function addPoints(p1:Point,p2:Point) : Point {
     const y = p1.y + p2.y;
     return {x:x,y:y};
 } 
+
+// optional paramaters
+function optionalParams({ a, b = 0 } = { a: "" }): void {
+    console.log(a,b)
+}
+
+optionalParams({ a: "yes" }); // ok, default b = 0
+optionalParams(); // ok, default to { a: "" }, which then defaults b = 0
+// printData({}); // error, 'a' is required if you supply an argument
  
 const newPoint = addPoints({x:3,y:4},{x:5,y:1})
 
@@ -76,6 +87,42 @@ class Employee {
     }
 }
 const employee = new Employee("John", "Lucas")
+
+// functions - interface 
+interface Sum {
+    (a: number, b:number): boolean
+}
+
+let _sum : Sum
+_sum = (a: number,b: number) =>{
+    return a > b
+}
+
+// Interfaces - Indexable Types 
+interface Person {
+    [index: number]: string
+}
+let indexArr:Person
+indexArr = ["John", "Lucas"]
+
+let firstName: string = indexArr[0]
+
+
+// Interfaces - Class Types 
+// object - classes 
+interface Bank {
+    branches: number
+    name: string
+}
+class Citi implements Bank {
+    location: string;
+    constructor(public branches: number, public name: string) {
+        this.location = 'London';
+        this.branches = branches;
+        this.name = name
+    }
+}
+const _bank: Bank = new Citi(50, "Citi")
 
 // output 
 console.log(progress)
@@ -98,5 +145,12 @@ console.log(sum(10, 20))
 console.log(obj)
 console.log(emp(obj))
 console.log(employee.fullName)
+
+console.log(_sum(10, 20))
+console.log(_bank)
+
+
+
+
 
 console.log(err("Error..."))
