@@ -1,19 +1,19 @@
-// Functions overloading 
-function overloading(x: number, y: number) : number; 
-function overloading(x) : any {
-    if(typeof x === 'object') {
-        return x++;
-    } else {
-        return x + y;
+// object - classes 
+class Employee {
+    fullName: string;
+    constructor(public firstName: string, public lastName: string) {
+        this.fullName = `${firstName} ${lastName}`;
     }
-} 
+}
+const employee = new Employee("John", "Lucas")
+
 
 // object - interface example 
 interface Point { 
     x: number;
     y: number;
     z?: number; // I am optional parameter 
-    readonly zz?: number // I am read only 
+    readonly zz?: number; // I am read only 
 }
 
 function addPoints(p1:Point,p2:Point) : Point { 
@@ -130,7 +130,18 @@ console.log(howard.getElevatorPitch());
 // console.log(howard.name); 
 
 
+// Type alias 
+type Name = string;
+type NameResolver = () => string;
 
+type Alias = { num: number }
+interface Interface {
+    num: number;
+}
+declare function aliased(arg: Alias): Alias;
+declare function interfaced(arg: Interface): Interface;
+
+console.log(employee.fullName)
 console.log(newPoint)
 console.log(_sum(10, 20))
 console.log(_bank)
