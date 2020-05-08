@@ -39,6 +39,12 @@ function sum(a: number,b: number): void {
     console.log(c)
 }
 
+// number only method with optional params and rest of the params
+function sumNumberOnly(a: number,b: number, c?:number, ...d:number[]): number {
+    const s:number = a + b;
+    return s
+}
+
 // null or undefined 
 let empty: undefined = undefined 
 let notInitialized: null = null 
@@ -72,6 +78,29 @@ class Employee {
 }
 const employee = new Employee("John", "Lucas")
 
+// Type alias 
+type Name = string;
+type NameResolver = () => string;
+
+type Alias = { num: number }
+interface Interface {
+    num: number;
+}
+declare function aliased(arg: Alias): Alias;
+declare function interfaced(arg: Interface): Interface;
+
+// Iterable - For in and For of 
+let pets = new Set(["Cat", "Dog", "Hamster"]);
+pets["species"] = "mammals";
+
+for (let pet in pets) {
+    console.log(pet); // "species"
+}
+
+for (let pet of pets) {
+    console.log(pet); // "Cat", "Dog", "Hamster"
+}
+
 // output 
 console.log(progress)
 console.log(count)
@@ -89,6 +118,7 @@ console.log(mixedValues)
 console.log(salary)
 console.log(mixedData)
 console.log(sum(10, 20))
+console.log(sumNumberOnly(10, 20))
 
 console.log(obj)
 console.log(emp(obj))

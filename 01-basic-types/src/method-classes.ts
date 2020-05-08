@@ -1,3 +1,13 @@
+// Functions overloading 
+function overloading(x: number, y: number) : number; 
+function overloading(x) : any {
+    if(typeof x === 'object') {
+        return x++;
+    } else {
+        return x + y;
+    }
+} 
+
 // object - interface example 
 interface Point { 
     x: number;
