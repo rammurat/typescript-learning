@@ -3,6 +3,7 @@
         "./src/*"
     ],
     "compilerOptions": {
+        "checkJs": true,
         "outDir": "./dist/",
         "module": "commonjs",
         "target": "es6",
