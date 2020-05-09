@@ -6,6 +6,7 @@
   "author": "Ram Murat Sharma <rammurat.rms.sharma0@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "css-loader": "^3.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

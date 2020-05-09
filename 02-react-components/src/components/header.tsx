@@ -6,7 +6,7 @@ interface HeaderProps {
     email: string; 
 }
 
-export const Header = (props: HeaderProps) => {
+const Header = (props: HeaderProps) => {
     return (<h3>
         Hello {props.userName}, you are registered with {props.email}!
     </h3>)
