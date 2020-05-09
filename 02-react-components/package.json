@@ -10,7 +10,7 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development --open"
   },
   "devDependencies": {
     "@types/react": "^16.9.34",
