@@ -7,7 +7,7 @@ interface NavigationProps {
 
 export const Navigation = (props: NavigationProps) => {
     return (<p>
-        <a href={props.links[0]}> Contact us</a>
+        {/* <a href={props.links[0]}> Contact us</a> */}
     </p>)
 }
 

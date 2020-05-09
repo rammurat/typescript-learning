@@ -6,10 +6,12 @@ interface HeaderProps {
     email: string; 
 }
 
+// NORMAL FUNCTIONAL COMPONENT
 const Header = (props: HeaderProps) => {
-    return (<h3>
+    return (<header>
+        <h3>Header</h3>
         Hello {props.userName}, you are registered with {props.email}!
-    </h3>)
+    </header>)
 }
 
 export default Header;

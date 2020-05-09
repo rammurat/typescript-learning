@@ -1,7 +1,16 @@
 import * as React from 'react';
 
-export default class Counter extends React.Component {
-  state = {
+interface Props {}
+interface State {
+  count: number;
+};
+
+export default class Counter extends React.Component<Props, State> {
+  static defaultProps: Props = {
+    count: 10
+  }; 
+
+  state: State = {
     count: 0
   };
 
@@ -19,8 +28,8 @@ export default class Counter extends React.Component {
 
   render () {
     return (
-      <div className="jsx-counter">
-        <h1>JSX Counter</h1>
+      <div className="ts-counter">
+        <h3>Counter</h3>
         <h3>{this.state.count}</h3>
         <button onClick={this.increment}>Increment</button>
         <button onClick={this.decrement}>Decrement</button>

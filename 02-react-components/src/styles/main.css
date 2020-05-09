@@ -1,4 +1,31 @@
+*{
+    padding: 5px;
+}
+header {
+    background: bisque;
+}
 
-.jsx-counter {
+footer {
+    background: cadetblue;
+}
+
+.ts-weekend {
+
+}
+
+.ts-jsx-counter {
     background: azure;
+}
+
+.ts-counter {
+    background: darkgray;
+}
+
+.ts-counter {
+    background: floralwhite;
+}
+
+button.t-button {
+    background: indigo;
+    color: white;
 }
