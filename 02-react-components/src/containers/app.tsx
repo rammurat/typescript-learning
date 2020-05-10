@@ -21,9 +21,9 @@ class App extends React.Component<Props, {}> {
         <Header userName="John Smith" email="j@smith.com"/>
 
         {/* Handle array of objects and object */}
-        {/* <Navigation links={data.navigation.links}/> */}
+        <Navigation links={data.navigation.links}/>
 
-        <Filters order={data.options.order} theme={data.options.theme}>
+        <Filters order={data.options.order} theme={data.options.theme} />
 
         {/* useState example*/}
         <Counter />

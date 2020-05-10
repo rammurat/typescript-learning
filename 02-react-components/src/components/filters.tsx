@@ -1,16 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-interface FiltersProps{
-    order: 'string',
-    theme: object
+type FiltersProps = {
+    order: string,
+    theme: {
+        currentTheme: string
+    }
 }
 
 class Filters extends React.Component<FiltersProps, {}> {
     render() {
         return (
             <div className="t-filters">
-                <p>Current theme: {this.props.theme}</p>
+                <h3>Filters</h3>
+                <p>Current order: {this.props.order}</p>
+                <p>Current theme: {this.props.theme.currentTheme}</p>
             </div>
         )
     }

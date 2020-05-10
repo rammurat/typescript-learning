@@ -11,6 +11,7 @@ function Weekend<T>(props: WeekendProps<T>) {
 
     return (
         <div className='ts-weekend'>
+            <h3>Weekend</h3>
             {items.map((row, i)=> {
                 return <span key={i}>{row}</span>
             })}

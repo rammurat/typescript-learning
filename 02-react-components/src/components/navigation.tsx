@@ -2,12 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 interface NavigationProps { 
-    links: []; 
+    links: {
+        id: number,
+        name: string,
+        href: string
+    }[]; 
 }
 
 export const Navigation = (props: NavigationProps) => {
     return (<div className="t-navigation">
-        {/* <a href={props.links[0]}> Contact us</a> */}
+        {props.links.map((item) => {
+            return <a key={item.id} href={item.href} target="_blank"> {item.name} </a>
+        })}
     </div>)
 }
 
