@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { createStore, applyMiddleware} from 'redux'
 import { Provider } from 'react-redux'
-// import thunk from 'redux-thunk';
+import thunk from 'redux-thunk';
 
 import App from './components/app'
 import rootReducer from './reducers'
@@ -14,7 +14,7 @@ const store = createStore<MyStore, any, any, any>(
   rootReducer,
   initialState,
   composeWithDevTools(
-    // applyMiddleware(thunk),
+    applyMiddleware(thunk),
   )
 )
 
