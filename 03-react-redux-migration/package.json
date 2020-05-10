@@ -6,13 +6,16 @@
   "author": "Ram Murat Sharma <rammurat.rms.sharma0@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/redux-thunk": "^2.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development --open"
   },
   "devDependencies": {
     "@types/react": "^16.9.34",

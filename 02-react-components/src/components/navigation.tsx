@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 
 interface NavigationProps { 
     links: {
-        id: number,
-        name: string,
-        href: string
+        id: number;
+        name: string;
+        href: string;
     }[]; 
 }
 

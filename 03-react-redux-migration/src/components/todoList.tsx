@@ -2,8 +2,12 @@ import * as React from "react";
 import Todo from './todo'
 
 type Props = {
-  todos: Array<object>,
-  toggleTodo: () => void
+  todos: {
+    id: number;
+    text: string; 
+    completed: boolean
+  }[],
+  toggleTodo: () => number
 }
 
 const TodoList = ({ todos, toggleTodo }: Props) => (
