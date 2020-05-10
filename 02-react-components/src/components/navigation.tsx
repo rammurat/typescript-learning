@@ -6,9 +6,9 @@ interface NavigationProps {
 }
 
 export const Navigation = (props: NavigationProps) => {
-    return (<p>
+    return (<div className="t-navigation">
         {/* <a href={props.links[0]}> Contact us</a> */}
-    </p>)
+    </div>)
 }
 
 export default Navigation

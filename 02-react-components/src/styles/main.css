@@ -10,15 +10,11 @@ footer {
 }
 
 .ts-weekend {
-
+    background: darkgray;
 }
 
 .ts-jsx-counter {
     background: azure;
-}
-
-.ts-counter {
-    background: darkgray;
 }
 
 .ts-counter {
@@ -28,4 +24,12 @@ footer {
 button.t-button {
     background: indigo;
     color: white;
+}
+
+.t-filters {
+    background-color: gainsboro;
+}
+
+.t-navigation {
+    background-color: goldenrod;
 }

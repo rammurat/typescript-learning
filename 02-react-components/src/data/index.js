@@ -5,7 +5,13 @@ const data = {
             {id: 2, name: 'about-us', href:'https://typescript.com/'}
         ]
     },
-    weekend : ["Sunday", "Saturday"]
+    weekend : ["Sunday", "Saturday"],
+    options: {
+        theme: {
+            currentTheme: 'White'
+        },
+        order: 'asc'
+    }
 }
 
 export default data

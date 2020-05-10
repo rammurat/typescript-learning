@@ -8,7 +8,7 @@ import Navigation from '../components/navigation'
 import JSXCounter from '../components/counter-jsx'
 import Counter from '../components/counter'
 import Weekend from '../components/weekend'
-
+import Filters from '../components/filters'
 import data from '../data'
 
 interface Props {
@@ -17,12 +17,25 @@ interface Props {
 class App extends React.Component<Props, {}> {
     render() {
       return (<React.Fragment>
+        {/* Normal functional component example */}
         <Header userName="John Smith" email="j@smith.com"/>
+
+        {/* Handle array of objects and object */}
         {/* <Navigation links={data.navigation.links}/> */}
+
+        <Filters order={data.options.order} theme={data.options.theme}>
+
+        {/* useState example*/}
         <Counter />
+
+        {/* Normal JSX example */}
         <JSXCounter />
+        
+        {/* Handling Array */}
         <Weekend items={data.weekend}/>
-        <Footer cLink="https://www.typescript.com/"/>
+
+        {/* Function component example */}
+        <Footer cLink="https://www.typescript.com/" totalVisits={5000}/>
       </React.Fragment>)
     }
 }
