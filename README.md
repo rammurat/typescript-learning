@@ -15,4 +15,4 @@
 * Start server - `npm run start`
 
 ## Remember
-**You have to run `yarn install` and `npm run start` within all these folders independently to test it out.**
+*You have to run `yarn install` and `npm run start` within all these folders independently to test it out.*
