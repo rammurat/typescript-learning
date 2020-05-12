@@ -1,7 +1,7 @@
 # TypeScript Learning
-* Run basic typescript syntax
-* Set-up TypeScript with React and test class and functional components 
-* Integrate React/Redux ToDo app with TypeScript 
+* Run basic TypeScript syntax
+* Set-up TypeScript with React and implement class/functional components 
+* Integrate TypeScript with React/Redux ToDo app. For ex:- [https://codesandbox.io/s/github/reduxjs/redux/tree/master/examples/todos]
 
 ## Tech utilized
 * React
