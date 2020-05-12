@@ -14,4 +14,5 @@
 * `yarn install`
 * Start server - `npm run start`
 
-** Note: You have to run `yarn install` and `npm run start` within all these folders independently to test it out.**
+## Rememer
+** You have to run `yarn install` and `npm run start` within all these folders independently to test it out. **
