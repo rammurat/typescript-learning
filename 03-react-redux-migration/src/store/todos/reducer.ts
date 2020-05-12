@@ -18,6 +18,16 @@ const reducer: Reducer<TodoState> = (state = initialState, action) => {
       case ToDoActionTypes.FETCH_ERROR: {
         return { ...state, loading: false, errors: action.payload };
       }
+      case ToDoActionTypes.ADD_TODO: {
+        return {
+          errors: state.errors,
+          loading: state.loading,
+          data: [
+            ...state.data,
+            action.payload
+          ]
+        };
+      }
       default:
         return state
     }

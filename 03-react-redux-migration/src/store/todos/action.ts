@@ -2,7 +2,7 @@ import { ActionCreator, Action, Dispatch } from "redux";
 import { ThunkAction } from "redux-thunk";
 
 import {AppState} from '../index'
-import {ToDoActionTypes } from "./types";
+import {ToDoActionTypes, TodoProps } from "./types";
 import todos from "../../data/todos";
 
 export type AppThunk = ActionCreator<
@@ -23,3 +23,12 @@ export const fetchRequest: AppThunk = () => {
     }
   };
 };
+
+export const addToDo: AppThunk = (item : TodoProps) => {
+  return (dispatch: Dispatch): Action => {
+    return dispatch({
+      type: ToDoActionTypes.ADD_TODO,
+      payload: item
+    });
+  }
+}

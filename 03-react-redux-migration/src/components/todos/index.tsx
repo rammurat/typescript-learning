@@ -4,12 +4,12 @@ import {AppState} from '../../store'
 import { ThunkDispatch } from "redux-thunk";
 import {fetchRequest} from '../../store/todos/action'
 import { AnyAction } from "redux";
-import {Todos} from '../../store/todos/types'
+import {TodoProps} from '../../store/todos/types'
 import { useEffect } from "react";
 
 interface PropsFromState {
     loading: boolean;
-    data: Todos[];
+    data: TodoProps[];
     errors?: string;
   }
   
