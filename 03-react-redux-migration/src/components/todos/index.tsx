@@ -14,14 +14,14 @@ interface PropsFromState {
   }
   
 interface propsFromDispatch {
-    fetchRequest: () => any;
+    fetchData: () => any;
 }
 
 type AllProps = PropsFromState & propsFromDispatch;
 
-const ToDo: React.FC<AllProps> = ({ loading, errors, data, fetchRequest }) => {
+const ToDo: React.FC<AllProps> = ({ loading, data, fetchData }) => {
     useEffect(() => {
-        fetchRequest()
+        fetchData()
     }, [])
     return (
         <React.Fragment>
@@ -42,7 +42,7 @@ const mapStateToProps = ({ todos }: AppState) => ({
 
 const mapDispatchProps = (dispatch : ThunkDispatch<any, any, AnyAction>) => {
     return {
-        fetchRequest: () => {
+        fetchData: () => {
           dispatch(fetchRequest());
         }
     };
