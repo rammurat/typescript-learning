@@ -1,8 +1,7 @@
 import * as React from "react";
-import ToDo from '../components/todo'
+import ToDos from './components/todos/index'
 import { Provider } from "react-redux";
-// import Filters from '../components/filters'
-import {AppState} from '../store/index'
+import {AppState} from './store/index'
 import {Store} from 'redux'
 
 interface MainProps {
@@ -12,8 +11,7 @@ interface MainProps {
 const App: React.FC<MainProps> = ({store}) => {
   return (
     <Provider store={store}>
-      Hellos
-      <ToDo />
+      <ToDos />
     </Provider>
   )
 }
