@@ -1,7 +1,8 @@
 import React from 'react'
+import { AnyAction } from "redux";
 import { connect } from 'react-redux'
 import { ThunkDispatch } from "redux-thunk";
-import { AnyAction } from "redux";
+
 import {AppState} from '../../store'
 import { addToDo } from '../../store/todos/action'
 import {TodoProps} from '../../store/todos/types'

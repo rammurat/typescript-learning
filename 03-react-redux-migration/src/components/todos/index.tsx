@@ -1,11 +1,11 @@
-import React from "react";
-import { connect } from "react-redux";
-import {AppState} from '../../store'
-import { ThunkDispatch } from "redux-thunk";
-import {fetchRequest} from '../../store/todos/action'
+import React, {useEffect} from "react";
 import { AnyAction } from "redux";
+import { connect } from "react-redux";
+import { ThunkDispatch } from "redux-thunk";
+
+import {AppState} from '../../store'
+import {fetchRequest} from '../../store/todos/action'
 import {TodoProps} from '../../store/todos/types'
-import { useEffect } from "react";
 
 interface PropsFromState {
     loading: boolean;

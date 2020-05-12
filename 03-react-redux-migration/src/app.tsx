@@ -1,9 +1,10 @@
 import * as React from "react";
+import {Store} from 'redux'
+import { Provider } from "react-redux";
+
 import ToDos from './components/todos/index'
 import AddTodo from './components/todos/addTodo'
-import { Provider } from "react-redux";
 import {AppState} from './store/index'
-import {Store} from 'redux'
 
 interface MainProps {
   store: Store<AppState>;
